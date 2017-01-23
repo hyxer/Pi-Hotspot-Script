@@ -220,7 +220,7 @@ check_returned_code $?
 
 execute_command "service chilli start" true "Starting CoovaChilli service"
 
-execute_command "sleep 3 && ifconfig -a | grep tun0" false "Cheching if interface tun0 has been created by CoovaChilli"
+execute_command "sleep 3 && ifconfig -a | grep tun0" false "Checking if interface tun0 has been created by CoovaChilli"
 if [ $COMMAND_RESULT -ne 0 ]; then
     display_message "Unable to find chilli interface tun0"
     exit 1
